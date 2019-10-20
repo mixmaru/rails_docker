@@ -12,7 +12,7 @@ rails 6
 
 ## railsの新規インストール
 ```
-git pull 
+git clone https://github.com/mixmaru/rails_docker.git
 cd rails_docker/app
 rbenv local 2.6.5
 bundle install --path vendor/bundle
