@@ -53,6 +53,9 @@ RUN bundle install --path vendor/bundle
 # yarn install
 RUN yarn install --check-files
 
+# アセットパイプラインのプリコンパイル
+RUN RAILS_ENV=production bin/rails assets:precompile
+
 EXPOSE 80
 
 CMD /etc/init.d/cron start && bundle exec rails s -e production & nginx -g "daemon off;"
